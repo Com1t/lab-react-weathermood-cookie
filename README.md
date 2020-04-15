@@ -1,13 +1,12 @@
 # Lab5 quiz - Weather-Mood-Cookie
 ![Component](img/weather-mood-cookie.png)
-There are total **9 parts** of code blanked by TAs in "src" folder.<br />
 In this lab, you should understand the basic coding style using react, and how to use cookie in a website.<br />
 `To test the code, you should run "npm install" first, and run "npm run start" sequently.`
 
 
 ## Grading
 #### 0. If you don't have a api key of open weather map, register one. (20%)
-#### 1. After you click the 'check' button, the city you search should apper on the 'favorite city' dropdown (using cookie). (20%)
+#### 1. After you click the 'check' button, the city you search should apper on the 'favorite city' dropdown. (20%)
 #### 2. The 'favorite city' should presist even if you refresh the page. (20%)
 #### 3. After clicking on a 'favorite city', the website should show the temprature of the clicked city. (20%)
 #### 4. After clicking 'clear' button, all 'favorite city' should be removed. (20%)
