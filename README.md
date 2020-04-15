@@ -1,8 +1,11 @@
 # Lab5 quiz - Weather-Mood-Cookie
 ![Component](img/weather-mood-cookie.png)
 In this lab, you should understand the basic coding style using react, and how to use cookie in a website.<br />
+There are many ways to complete this lab, and you can modify the code as you like.<br />
 `To test the code, you should run "npm install" first, and run "npm run start" sequently.`
 
+## Example
+For a working example, check http://140.114.85.27:7070/
 
 ## Grading
 #### 0. If you don't have a api key of open weather map, register one. (20%)
