@@ -16,5 +16,5 @@ For a working example, check http://140.114.85.27:7070/
 
 ## Submission
 Open a new merge request when you finished your quiz. <br />
-Submission must before 4/16 17:20.<br />
+Submission must before 4/16 23:59.<br />
 LATE-SUBMISSION WILL NOT BE ACCEPTED!!!<br />
