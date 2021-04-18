@@ -1,4 +1,4 @@
-# Lab5 quiz - Weather-Mood-Cookie
+# Lab 5 - Weather-Mood-Cookie
 ![Component](img/weather-mood-cookie.png)
 In this lab, you should understand the basic coding style using react, and how to use cookie in a website.<br />
 There are many ways to complete this lab, and you can modify the code as you like.<br />
