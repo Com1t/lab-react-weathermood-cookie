@@ -46,7 +46,7 @@ class Main extends React.Component {
         this.setFavoriteCities = this.setFavoriteCities.bind(this);
         this.clearFavoriteCities = this.clearFavoriteCities.bind(this);
     }
-
+    // TODO
     render() {
         return (
             <Router>
@@ -93,7 +93,7 @@ class Main extends React.Component {
             </Router>
         );
     }
-
+    // TODO
     setFavoriteCities(city) {
     }
 
@@ -102,14 +102,14 @@ class Main extends React.Component {
             navbarToggle: !prevState.navbarToggle
         }));
     }
-
+    // TODO
     handleFormQuery(city, unit) {
         this.setState({
             city: city,
             unit: unit
         }, ()=>{});
     }
-
+    // TODO
     clearFavoriteCities() {
     }
 }

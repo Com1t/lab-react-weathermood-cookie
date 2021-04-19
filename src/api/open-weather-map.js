@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // TODO replace the key with yours
-const key = '36978c6550efee0e27e50850cc57adda';
+const key = '{YOUR KEY}';
 const baseUrl = `http://api.openweathermap.org/data/2.5/weather?appid=${key}`;
 
 export function getWeatherGroup(code) {
