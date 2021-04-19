@@ -47,7 +47,7 @@ export default class Today extends React.Component {
             cancelWeather();
         }
     }
-
+    // TODO
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
         this.setState({
