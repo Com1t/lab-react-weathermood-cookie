@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     BrowserRouter as Router,
     Route,
@@ -68,12 +69,12 @@ class Main extends React.Component {
                                             Favorite City
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem>
-                                                Option 1
-                                            </DropdownItem>
+                                            {this.state.favoriteCities.map((city_name)=>{
+                                                return <DropdownItem onClick={()=>this.setState({city:city_name})}>{city_name}</DropdownItem>
+                                            })}
                                             <DropdownItem divider />
                                             <DropdownItem onClick={this.clearFavoriteCities}>
-                                                Option 2
+                                                Clear
                                             </DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
@@ -95,6 +96,17 @@ class Main extends React.Component {
     }
     // TODO
     setFavoriteCities(city) {
+        const { cookies } = this.props;
+        var cities = [];
+        if(cookies.get('cities'))
+            var cities = cookies.get('cities').split(';');
+        if(cities.indexOf(city) == -1){
+            cities.push(city);
+            cookies.set('cities', cities.join(';'), { path: '/' });
+        }
+        this.setState({
+            favoriteCities: cookies.get('cities')? cookies.get('cities').split(';') : []
+        });
     }
 
     handleNavbarToggle() {
@@ -107,10 +119,17 @@ class Main extends React.Component {
         this.setState({
             city: city,
             unit: unit
-        }, ()=>{});
+        }, ()=>{
+            this.setFavoriteCities(city);
+        });
     }
     // TODO
     clearFavoriteCities() {
+        const { cookies } = this.props;
+        cookies.remove('cities');
+        this.setState({
+            favoriteCities: cookies.get('cities')? cookies.get('cities').split(';') : []
+        });
     }
 }
 

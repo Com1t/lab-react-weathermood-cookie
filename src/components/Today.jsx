@@ -49,10 +49,10 @@ export default class Today extends React.Component {
     }
     // TODO
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
+        console.log(nextProps);
         this.setState({
             unit: nextProps.unit
-        }, ()=>{});
+        }, ()=>{this.getWeather(nextProps.city, nextProps.unit)});
     }
 
     render() {
