@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Develop server URL
-const postBaseUrl = 'http://localhost:3000';
+const postBaseUrl = 'http://140.114.91.242:3000';
 
 /* data should like this 
 var data = qs.stringify({

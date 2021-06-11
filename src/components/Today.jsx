@@ -5,6 +5,8 @@ import WeatherDisplay from 'components/WeatherDisplay.jsx';
 import WeatherForm from 'components/WeatherForm.jsx';
 import {getWeather} from 'api/open-weather-map.js';
 import {getUser, signIn, logIn, modifyUser} from 'api/toBack.js';
+import {addLine, modifyLine, getLine, setMainLine} from 'api/toBackLine.js';
+import {addNode} from 'api/toBackNode.js';
 
 import './weather.css';
 
@@ -92,13 +94,13 @@ export default class Today extends React.Component {
 
             // logIn
             // var data = qs.stringify({
-            //     'account': 'orange',
-            //     'password': 'orange' 
-            //   });
+                // 'account': 'apple',
+                // 'password': 'banana' 
+              // });
             // logIn(data).then(weather => {
-            //     console.log(weather);
+                // console.log(weather);
             // }).catch(err => {
-            //     console.error('Error while logIn', err);
+                // console.error('Error while logIn', err);
             // });
 
             // getUser
@@ -122,7 +124,41 @@ export default class Today extends React.Component {
             // }).catch(err => {
             //     console.error('Error while signIn', err);
             // });
-            
+			
+            // addLine
+			/* data should like this */
+			// var data = qs.stringify({
+			  // 'owner': '60add554ec270526baeaa1d1',
+			  // 'sharer': '60af952cb4eaca677002e1a2',
+			  // 'url': '',
+			  // 'title': 'TASK',
+			  // 'content': 'BUY MASK',
+			  // 'color_RGB': '[12,23,45]',
+			  // 'create_date': '2015-11-22T08:01:35.915+00:00',
+			  // 'due_date': '2020-11-25T08:01:35.915+00:00',
+			  // 'importance': '0',
+			  // 'is_main': 'true' 
+			// }); 
+            // addLine(data).then(weather => {
+                // console.log(weather);
+            // }).catch(err => {
+                // console.error('Error while signIn', err);
+            // });
+            var data = qs.stringify({
+			  'mother_line_id': '60add8d07ce322492421408f',
+			  'create_date': '2017-10-22T08:01:35.915+00:00',
+			  'due_date': '1939-11-22T08:01:35.915+00:00',
+			  'title': 'BUY MASK',
+			  'url': 'http://MMM%(&^*&^.com',
+			  'content': 'MASK',
+			  'is_main': 'true' 
+			});
+            addNode(data).then(weather => {
+                console.log(weather);
+            }).catch(err => {
+                console.error('Error while signIn', err);
+            });
+			
             getWeather(city, unit).then(weather => {
                 this.setState({
                     ...weather,

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Develop server URL
-const postBaseUrl = 'http://localhost:3000';
+const postBaseUrl = 'http://140.114.91.242:3000';
 
 /* data should like this 
 var data = qs.stringify({
@@ -11,7 +11,7 @@ var data = qs.stringify({
   'title': 'BUY MASK',
   'url': 'http://MMM%(&^*&^.com',
   'content': 'MASK',
-  'is_main': 'true' 
+  'importance': '0' 
 }); */
 export function addNode(data) {
   let url = `${postBaseUrl}/node/addNode`;
@@ -42,13 +42,14 @@ Note: The following are not allow to modify "mother_line_id, branch_line_id"
 data should like this 
 You only need to put what you want to change into it
 var data = qs.stringify({
-  'mother_line_id': '60add8d07ce322492421408f',
-//   'create_date': '2017-10-22T08:01:35.915+00:00',
-//   'due_date': '1939-11-22T08:01:35.915+00:00',
-//   'title': 'BUY MASK',
-//   'url': 'http://MMM%(&^*&^.com',
-//   'content': 'MASK',
-//   'is_main': 'true' 
+  'create_date': '2017-10-22T08:01:35.915+00:00',
+  // 'due_date': '1939-11-22T08:01:35.915+00:00',
+  // 'title': 'BUY MASK',
+  // 'url': 'http://MMM%(&^*&^.com',
+  // 'content': 'MASK',
+  // 'achieved': 'false',
+  // 'achieved_at': '2017-10-22T08:01:35.915+00:00',
+  // 'importance': '0' 
 }); */
 export function modifyNode(nodeId,data) {
   let url = `${postBaseUrl}/node/modifyNode/`;
