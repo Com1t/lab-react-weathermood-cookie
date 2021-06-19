@@ -112,7 +112,7 @@ and make data uploaded as avatar
 export function modifyAvatar(userId, data) {
   let url = `${postBaseUrl}/user/avatar/`;
   url = url + userId;
-  let headers: { 
+  let headers = { 
     ...data.getHeaders()
   }
   

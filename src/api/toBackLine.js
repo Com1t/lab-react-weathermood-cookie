@@ -125,7 +125,7 @@ export function shareLine(lineId, userId) {
   let headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
-  
+  console.log(url)
   return axios.put(url, {
     headers: headers
   })
@@ -271,7 +271,7 @@ export function addBranch(data) {
 // for instance
 // /line/deleteBranch/60c32033e46b792cdc86a643/60c3689c069c0cb5773d9967
 // this will delete branch line '60c3689c069c0cb5773d9967' from node '60c32033e46b792cdc86a643'
-export function deleteLine(nodeId, lineId) {
+export function deleteBranch(nodeId, lineId) {
   let url = `${postBaseUrl}/line/deleteBranch/`;
   url = url + nodeId + '/' + lineId;
   let headers = {

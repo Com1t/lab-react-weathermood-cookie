@@ -5,7 +5,7 @@ import WeatherDisplay from 'components/WeatherDisplay.jsx';
 import WeatherForm from 'components/WeatherForm.jsx';
 import {getWeather} from 'api/open-weather-map.js';
 import {getUser, signIn, logIn, modifyUser} from 'api/toBack.js';
-import {addLine, modifyLine, getLine, setMainLine} from 'api/toBackLine.js';
+import {addLine, modifyLine, getLine, setMainLine, shareLine} from 'api/toBackLine.js';
 import {addNode} from 'api/toBackNode.js';
 
 import './weather.css';
@@ -144,16 +144,22 @@ export default class Today extends React.Component {
             // }).catch(err => {
                 // console.error('Error while signIn', err);
             // });
-            var data = qs.stringify({
-			  'mother_line_id': '60add8d07ce322492421408f',
-			  'create_date': '2017-10-22T08:01:35.915+00:00',
-			  'due_date': '1939-11-22T08:01:35.915+00:00',
-			  'title': 'BUY MASK',
-			  'url': 'http://MMM%(&^*&^.com',
-			  'content': 'MASK',
-			  'is_main': 'true' 
-			});
-            addNode(data).then(weather => {
+            // var data = qs.stringify({
+			  // 'mother_line_id': '60add8d07ce322492421408f',
+			  // 'create_date': '2017-10-22T08:01:35.915+00:00',
+			  // 'due_date': '1939-11-22T08:01:35.915+00:00',
+			  // 'title': 'BUY MASK',
+			  // 'url': '"http://MMM%(&^*&^.com"',
+			  // 'content': '"MASK"',
+			  // 'is_main': 'true' 
+			// });
+            // addNode(data).then(weather => {
+                // console.log(weather);
+            // }).catch(err => {
+                // console.error('Error while signIn', err);
+            // });
+			
+            shareLine('60ccb35f32776dca16fbe9d1','60ccb35f32776dca16fbe9d0').then(weather => {
                 console.log(weather);
             }).catch(err => {
                 console.error('Error while signIn', err);
