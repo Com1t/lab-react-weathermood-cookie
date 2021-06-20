@@ -159,7 +159,7 @@ export default class Today extends React.Component {
                 // console.error('Error while signIn', err);
             // });
 			
-            shareLine('60ccb35f32776dca16fbe9d1','60ccb35f32776dca16fbe9d0').then(weather => {
+            shareLine('60ccc70a9b24c43dffbcc593','60ca08a4c485203114aa7388').then(weather => {
                 console.log(weather);
             }).catch(err => {
                 console.error('Error while signIn', err);
