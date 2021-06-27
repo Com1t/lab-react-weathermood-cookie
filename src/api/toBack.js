@@ -113,7 +113,7 @@ export function modifyAvatar(userId, data) {
   let url = `${postBaseUrl}/user/avatar/`;
   url = url + userId;
   let headers = { 
-    ...data.getHeaders()
+    'Content-Type': 'application/json; charset=utf-8'
   }
   
   return axios.put(url, data, {
